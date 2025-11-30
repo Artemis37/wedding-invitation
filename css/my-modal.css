@@ -1,0 +1,99 @@
+/* Modal basic styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  background: unset;
+  padding: 20px;
+  box-shadow: unset;
+  border: none;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Swiper specific styling */
+.swiper-container {
+  width: 100%;
+  height: 80vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#album2-modal, #album1-modal, #album3-modal {
+
+  .swiper-container {
+    position: relative;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    content: '';
+  }
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next {
+    right: 25px;
+  }
+  .swiper-button-prev {
+    left: -32px; /* Adjust this as needed */
+  }
+  .swiper-button-next i, .swiper-button-prev i {
+    font-size: 24px;
+    color: white;
+  }
+}
+@media screen and (max-width: 768px) {
+  #album2-modal, #album1-modal, #album3-modal {
+    .swiper-container {
+      height: auto;
+    }
+    .swiper-button-next {
+      right: -30px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  #album2-modal, #album1-modal, #album3-modal {
+    .modal-content {
+      width: 100%;
+    }
+
+    .swiper-button-next{
+      right: -15px;
+    }
+    .swiper-button-prev{
+      left: -15px;
+    }
+  }
+}

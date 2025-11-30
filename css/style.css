@@ -115,7 +115,7 @@ figure {
   margin: 0;
   padding: 0;
   line-height: 40px;
-  font-family: "Sacramento", Arial, serif;
+  font-family: 'Dancing Script', 'Quicksand', Roboto, 'Segoe UI', Arial, sans-serif;
 }
 .fh5co-nav a {
   padding: 5px 10px;
@@ -220,7 +220,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -788,13 +788,13 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   color: #b48418;
   padding-left: 10px;
   padding-right: 10px;
@@ -872,7 +872,7 @@ form label {
   margin-bottom: 0px;
   font-size: 100px;
   line-height: 1.5;
-  font-family: "Sacramento", Arial, serif;
+  font-family: 'Dancing Script', 'Quicksand', Roboto, 'Segoe UI', Arial, sans-serif;
 }
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
@@ -1098,7 +1098,7 @@ form label {
   }
 }
 .couple-half h3 {
-  font-family: "Sacramento", Arial, serif;
+  font-family: 'Dancing Script', 'Quicksand', Roboto, 'Segoe UI', Arial, sans-serif;
   color: #b48418;
   font-size: 40px;
 }
@@ -1221,7 +1221,7 @@ form label {
   line-height: 1.5;
   font-weight: bold;
   color: #b48418;
-  font-family: "Sacramento", Arial, serif;
+  font-family: 'Dancing Script', 'Quicksand', Roboto, 'Segoe UI', Arial, sans-serif;
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
@@ -1263,7 +1263,7 @@ form label {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 100px;
   height: 100px;
 }
@@ -2033,7 +2033,7 @@ form label {
   justify-content: center;
   align-items: center;
   position: relative; /* Để định vị text */
-  opacity: ;
+  /* opacity: ; */
   transform: translateY(100px); /* Hiệu ứng chuyển động */
   transition: transform 0.3s ease, opacity 0.3s ease;
   margin: 10px 0; /* Khoảng cách giữa các nút */

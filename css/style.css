@@ -2352,3 +2352,16 @@ form label {
       display: block;
   }
 }
+
+.d-flex {
+	display: flex;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.address-panel {
+  width: 1000px;
+  font-size: 25px;
+}

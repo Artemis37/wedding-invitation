@@ -2363,5 +2363,30 @@ form label {
 
 .address-panel {
   width: 1000px;
+  max-width: 100%;
   font-size: 25px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .address-panel {
+    width: 90%;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .address-panel {
+    width: 100%;
+    font-size: 18px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .address-panel {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+  }
 }

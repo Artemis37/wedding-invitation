@@ -115,7 +115,7 @@
 	</button>
 
 	<!-- Audio element with autoplay -->
-	<audio id="audioPlayer" src="./ToTheMoon-hooligan.mp3" autoplay></audio>
+	<audio id="audioPlayer" src="./UntilIFoundYou.mp3" autoplay loop muted></audio>
 
 	<div id="page">
 		<nav class="fh5co-nav" role="navigation">
@@ -659,26 +659,38 @@
 		}
 
 		// Ensure the audio plays automatically when the page loads
-		window.onload = function () {
+		document.addEventListener('DOMContentLoaded', function () {
 			var audio = document.getElementById("audioPlayer");
 			var icon = document.getElementById("musicIcon");
 
-			// Attempt to play the audio (autoplay might be blocked)
+			// Unmute and play the audio
+			audio.muted = false;
 			var playPromise = audio.play();
 
 			// Check if autoplay was successful
 			if (playPromise !== undefined) {
 				playPromise.then(function () {
-					// Autoplay started successfully
+					// Autoplay started successfully with sound
 					icon.classList.remove("fa-volume-mute");
 					icon.classList.add("fa-volume-up");
 				}).catch(function (error) {
-					// Autoplay was blocked, set icon to mute state
+					// Autoplay was blocked, keep muted state
+					console.log('Autoplay blocked, waiting for user interaction');
 					icon.classList.remove("fa-volume-up");
 					icon.classList.add("fa-volume-mute");
+					
+					// Try to play on first user interaction
+					document.body.addEventListener('click', function playOnClick() {
+						audio.muted = false;
+						audio.play().then(function() {
+							icon.classList.remove("fa-volume-mute");
+							icon.classList.add("fa-volume-up");
+						});
+						document.body.removeEventListener('click', playOnClick);
+					}, { once: true });
 				});
 			}
-		};
+		});
 
 	</script>
 

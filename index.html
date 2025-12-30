@@ -663,6 +663,9 @@
 			var audio = document.getElementById("audioPlayer");
 			var icon = document.getElementById("musicIcon");
 
+			// Set volume to 50%
+			audio.volume = 0.3;
+			
 			// Unmute and play the audio
 			audio.muted = false;
 			var playPromise = audio.play();
